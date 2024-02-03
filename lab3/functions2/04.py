@@ -76,37 +76,6 @@ movies = [
     }
 ]
 
-#1
-def movie(a):
-    for i in range(len(movies)):
-        if movies[i]["name"] == a:
-            if movies[i]["imdb"] > 5.5:
-                return True
-    return False
-
-m = input("Movie name: ")
-print(movie(m))
-
-#2
-def movieList():
-    l = []
-    for i in range(len(movies)):
-        if movies[i]["imdb"] > 5.5:
-            l.append(movies[i])
-    return l
-
-print(movieList())
-
-#3
-def category(a):
-    for i in range(len(movies)):
-        if movies[i]["category"] == a:
-            print(movies[i])
-
-a = input("Category name: ")
-category(a)
-
-#4
 def average(a):
     cnt = 0
     for i in range(len(movies)):
@@ -122,17 +91,3 @@ for i in range(n):
     l.append(b)
 
 print(average(l))
-
-#5
-def averageCategory(a):
-    cnt = 0
-    cnt1 = 0
-    for i in range(len(movies)):
-        if movies[i]["category"] == a:
-            cnt += movies[i]["imdb"]
-            cnt1 += 1
-    return round(cnt / cnt1, 1)
-
-b = input()
-
-print(averageCategory(b))
